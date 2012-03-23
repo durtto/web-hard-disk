@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>檔案下載系統 V2.0 beta</title>
+
+    <!-- ** CSS ** -->
+    <link rel="stylesheet" type="text/css" href="../css/ext-all.css" />
+	<link rel="stylesheet" type="text/css" href="../css/layout-browser.css">
+	<link rel="stylesheet" type="text/css" href="../css/mask.css">
+
+</head>
+<body>
+	<div id="loading-mask" style=""></div>
+	<div id="loading">
+		<div class="loading-indicator">
+			<img src="../images/65_cycle_twelve_24.gif" border="0"><span id="loading-msg">Loading styles and images...</span>
+		</div>
+	</div>
+	
+	<!-- ** Javascript ** -->
+	<script type="text/javascript">document.getElementById('loading-msg').innerHTML = 'Loading Ext Core...';</script>
+	<script type="text/javascript" src="../lib/ext-base.js"></script>
+	<script type="text/javascript" src="../lib/ext-all.js"></script>
+	<script type="text/javascript">document.getElementById('loading-msg').innerHTML = 'Loading SWFUpload Core...';</script>
+	<script type="text/javascript" src="../lib/swfupload.js"></script>
+	<script type="text/javascript" src="../lib/plugins/swfupload.queue.js"></script>
+	<script type="text/javascript" src="../lib/plugins/swfupload.speed.js"></script>
+	<script type="text/javascript">document.getElementById('loading-msg').innerHTML = 'Loading UI Components...';</script>
+	<script type="text/javascript" src="./js/uploadHandler.js"></script>
+	<script type="text/javascript" src="./js/uploadWindow.js"></script>
+	<script type="text/javascript" src="./js/newDir.js"></script>
+	<script type="text/javascript" src="./js/basic.js"></script>
+	<script type="text/javascript" src="./js/layout-browser.js"></script>
+	<script type="text/javascript" src="./js/dd.js"></script>  
+	<script type="text/javascript" src="./js/contextmenuFile.js"></script>  
+	<script type="text/javascript" src="./js/contextmenuDir.js"></script>  
+	
+	<script>
+		var swfu;
+		
+		Ext.get('loading').remove();
+		Ext.get('loading-mask').fadeOut({
+			remove:true
+		});
+	</script>
+	
+	<div id="header"><h1>檔案下載系統 V2.0 </h1></div>
+	<div id="loayout"></div>
+	
+</body>
+</html>
